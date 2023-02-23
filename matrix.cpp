@@ -57,8 +57,15 @@ double matrix::getMax(){
 }
 
 bool matrix::findElement(int no){
-	//TO DO
-	std::cout<<"\nElement not found\n";
+	for (int i=0; i<rows; i++) {
+		for (int j=0; j<cols; j++) {
+			if (no == grid[i][j]) {
+				std::cout << "Element found at (" << i << ", " << j << ")\n";	//why isn't the file using namespace std? lol
+				return true;
+			}
+		}
+	}
+	std::cout<<"Element not found\n";
 	return false;
 }
 
