@@ -70,7 +70,11 @@ bool matrix::findElement(int no){
 }
 
 void matrix::changeElement(int r, int c, int no){
-	//TO DO
+	if (r >= rows || c >= cols) {
+		std::cout << "Invalid index outside of matrix\n";
+		return;
+	}
+	grid[r][c] = no;
 	return;
 }
 void matrix::multiplyMatrix(){
