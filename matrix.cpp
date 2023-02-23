@@ -78,8 +78,20 @@ void matrix::changeElement(int r, int c, int no){
 	return;
 }
 void matrix::multiplyMatrix(){
-	//TO DO
-	//Hint: May want to store the new result in grid_temp and print that matrix
+	for(int i = 0; i<rows; i++){
+		for(int j = 0; j<cols; j++){
+			grid_temp[i][j] = grid[0][j] * grid[i][0] +
+							  grid[1][j] * grid[i][1] +
+							  grid[2][j] * grid[i][2] +
+							  grid[3][j] * grid[i][3];
+		}
+	}
+	for(int i = 0; i<rows; i++){
+		for(int j = 0; j<cols; j++){
+			std::cout<<grid_temp[i][j]<<"\t";
+		}
+	std::cout<<"\n";
+	}
 	return;
 }
 
