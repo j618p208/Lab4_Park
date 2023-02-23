@@ -96,8 +96,12 @@ void matrix::multiplyMatrix(){
 }
 
 void matrix::transposeMatrix(){
-	//TO DO
-	//Hint: May want to store the new results in grid_temp and print that matrix
+	for(int i = 0; i<rows; i++){
+		for(int j = 0; j<cols; j++){
+				std::cout<<grid[j][i]<<"\t";
+		}
+		std::cout<<"\n";
+	}
 	return;
 }
 matrix::~matrix(){
