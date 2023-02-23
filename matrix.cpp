@@ -24,12 +24,12 @@ void matrix::createMatrix()
 }
 
 void matrix::printMatrix(){
-        for(int i = 0; i<rows; i++){
-                for(int j = 0; j<cols; j++){
-                        std::cout<<grid[i][j]<<"\t";
-                }
-                std::cout<<"\n";
-        }
+	for(int i = 0; i<rows; i++){
+		for(int j = 0; j<cols; j++){
+				std::cout<<grid[i][j]<<"\t";
+		}
+		std::cout<<"\n";
+	}
 }
 
 void matrix::addMatrix(){
@@ -38,17 +38,21 @@ void matrix::addMatrix(){
 			grid_temp[i][j] = grid[i][j]+grid[i][j];
 		}
 	}
-        for(int i = 0; i<rows; i++){
-                for(int j = 0; j<cols; j++){
+	for(int i = 0; i<rows; i++){
+		for(int j = 0; j<cols; j++){
 			std::cout<<grid_temp[i][j]<<"\t";
-                }
-		std::cout<<"\n";
-        }
+		}
+	std::cout<<"\n";
+	}
 }
 
 double matrix::getMax(){
-	//TO DO
 	double max_element = 0;
+	for (int i=0; i<rows; i++) {
+		for (int j=0; j<cols; j++) {
+			max_element = max_element > grid[i][j] ? max_element : grid[i][j];
+		}
+	}
 	return max_element;
 }
 

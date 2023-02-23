@@ -8,4 +8,4 @@ matrix.o: matrix.h matrix.cpp
 	g++ -g -std=c++11 -Wall -c matrix.cpp
 
 clean:
-	rm *.o prog
+	del *.o prog.exe
